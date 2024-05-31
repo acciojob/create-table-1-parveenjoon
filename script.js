@@ -17,7 +17,8 @@ function insert_Row() {
     
     // Insert the new row at the top of the table
     if (table.rows.length > 0) {
-        table.insertBefore(newRow, table.rows[0]);
+        // Insert the new row after the header row
+        table.insertBefore(newRow, table.rows[1]);
     } else {
         // If the table is empty, simply append the new row
         table.appendChild(newRow);
